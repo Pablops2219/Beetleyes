@@ -70,70 +70,6 @@ namespace Beetleyes
 
         }
 
-
-        //----------------------------------------------------------------------------------------------------
-        //HELPER METHODS--------------------------------------------------------------------------------------
-        //----------------------------------------------------------------------------------------------------
-
-
-        public bool onMainMenu = true;
-
-        public override void OnSceneWasLoaded(int buildIndex, string sceneName)
-        {
-            markersCreated = false;
-            //LoggerInstance.Msg($"Scene {sceneName} with build index {buildIndex} has been loaded!");
-            if (0 <= buildIndex && buildIndex <= 2)
-            {
-                onMainMenu = true;
-            }
-            else
-            {
-                onMainMenu = false;
-            }
-        }
-
-        
-        private Texture2D LoadTexture(string fileName)
-        {
-            string path = Path.Combine(assetFolder, fileName);
-
-            if (!File.Exists(path))
-            {
-                MelonLogger.Error($"Texture not found: {path}");
-                return null;
-            }
-
-            byte[] data = File.ReadAllBytes(path);
-            Texture2D tex = new Texture2D(2, 2, TextureFormat.RGBA32, false);
-            ImageConversion.LoadImage(tex, data);
-            return tex;
-        }
-
-        public Transform hudRoot;
-
-
-        private void FindHudRoot()
-        {
-            var canvases = GameObject.FindObjectsOfType<Canvas>();
-            foreach (var canvas in canvases)
-            {
-                if (canvas.name == "Canvas" || canvas.name == "Canvas_CustomLobby")
-                {
-                    Transform playerHud = canvas.transform.Find("PlayerHUD");
-                    if (playerHud != null)
-                    {
-                        hudRoot = playerHud.Find("Root");
-                        if (hudRoot != null)
-                        {
-                            //MelonLogger.Msg("HUD Root found");
-                            return;
-                        }
-                    }
-                }
-            }
-        }
-
-
         Texture2D markerTexture;
         public RectTransform rt;
         public List<RawImage> markers = new();
@@ -165,21 +101,6 @@ namespace Beetleyes
             }
             // MelonLogger.Msg($"Created {markers.Count} markers");
             markersCreated = true;
-        }
-
-        public Vector2 ScreenToHud(Vector3 screenPos)
-        {
-            RectTransform hud = hudRoot.GetComponent<RectTransform>();
-
-            Vector2 localPos;
-
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                hud,
-                screenPos,
-                null,          // si el canvas es Overlay
-                out localPos);
-
-            return localPos;
         }
 
         public Camera getCamera()
@@ -250,6 +171,82 @@ namespace Beetleyes
             }
             markers.Clear();
             markersCreated = false;
+        }
+        
+        //----------------------------------------------------------------------------------------------------
+        //HELPER METHODS--------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------------
+
+        public Vector2 ScreenToHud(Vector3 screenPos)
+        {
+            RectTransform hud = hudRoot.GetComponent<RectTransform>();
+
+            Vector2 localPos;
+
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                hud,
+                screenPos,
+                null,          // si el canvas es Overlay
+                out localPos);
+
+            return localPos;
+        }
+
+        public bool onMainMenu = true;
+
+        public override void OnSceneWasLoaded(int buildIndex, string sceneName)
+        {
+            markersCreated = false;
+            //LoggerInstance.Msg($"Scene {sceneName} with build index {buildIndex} has been loaded!");
+            if (0 <= buildIndex && buildIndex <= 2)
+            {
+                onMainMenu = true;
+            }
+            else
+            {
+                onMainMenu = false;
+            }
+        }
+
+        
+        private Texture2D LoadTexture(string fileName)
+        {
+            string path = Path.Combine(assetFolder, fileName);
+
+            if (!File.Exists(path))
+            {
+                MelonLogger.Error($"Texture not found: {path}");
+                return null;
+            }
+
+            byte[] data = File.ReadAllBytes(path);
+            Texture2D tex = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+            ImageConversion.LoadImage(tex, data);
+            return tex;
+        }
+
+        public Transform hudRoot;
+
+
+        private void FindHudRoot()
+        {
+            var canvases = GameObject.FindObjectsOfType<Canvas>();
+            foreach (var canvas in canvases)
+            {
+                if (canvas.name == "Canvas" || canvas.name == "Canvas_CustomLobby")
+                {
+                    Transform playerHud = canvas.transform.Find("PlayerHUD");
+                    if (playerHud != null)
+                    {
+                        hudRoot = playerHud.Find("Root");
+                        if (hudRoot != null)
+                        {
+                            //MelonLogger.Msg("HUD Root found");
+                            return;
+                        }
+                    }
+                }
+            }
         }
 
         public bool IsBeetleVisible(BeetleActor beetle)
