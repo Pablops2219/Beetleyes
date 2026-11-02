@@ -1,0 +1,550 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <RootNamespace>Beetleyes</RootNamespace>
+        <LangVersion>default</LangVersion>
+        <IsPackable>false</IsPackable>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <FileVersion>1.0.0.0</FileVersion>
+        <NeutralLanguage>en-US</NeutralLanguage>
+        <AssemblyName>Beetleyes</AssemblyName>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="Unity.Multiplayer.Tools.MetricEvents">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Multiplayer.Tools.MetricEvents.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VFXModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.VFXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Telemetry">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Core.Telemetry.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.AssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Drawing">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppSystem.Drawing.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Tools.Initialization">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Multiplayer.Tools.Initialization.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem.ForUI">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.InputSystem.ForUI.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBakeryAPV">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppBakeryAPV.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubstanceModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.SubstanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppSystem.Xml.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPrimeTween.Runtime">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppPrimeTween.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Tools.NetworkProfiler.Runtime">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Multiplayer.Tools.NetworkProfiler.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Data">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppSystem.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HierarchyCoreModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.HierarchyCoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.XRModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.XRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Tools.Adapters.Ngo1">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Multiplayer.Tools.Adapters.Ngo1.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.2D.Runtime">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.RenderPipelines.Universal.2D.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFMODUnity">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppFMODUnity.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppcom.nuin.scriptableharmony">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2Cppcom.nuin.scriptableharmony.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIElementsModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UIElementsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.JSONSerializeModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.JSONSerializeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HotReloadModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.HotReloadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ParticleSystemModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.ParticleSystemModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityCurlModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UnityCurlModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.MultiplayerModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.MultiplayerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBakeryECS">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppBakeryECS.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Core">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppSystem.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ShaderRuntimeModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.ShaderRuntimeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Authentication.PlayerAccounts">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Authentication.PlayerAccounts.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Localization">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Wire.Internal">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Wire.Internal.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cpp__Generated">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2Cpp__Generated.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDissonanceFMOD_Recording">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppDissonanceFMOD_Recording.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ContentLoadModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.ContentLoadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.TerrainModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AnimationModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.AnimationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Configuration">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Core.Configuration.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.QoS">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.QoS.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst.Unsafe">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Burst.Unsafe.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UnityWebRequestModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Scheduler">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Core.Scheduler.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.MarshallingModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.MarshallingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Core.Runtime.Shared">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.RenderPipelines.Core.Runtime.Shared.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SharedInternalsModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.SharedInternalsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GIModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.GIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AndroidJNIModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.AndroidJNIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Timeline">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Timeline.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.RenderAs2DModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.RenderAs2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Authentication">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Authentication.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ScreenCaptureModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.ScreenCaptureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GameCenterModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.GameCenterModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ShaderVariantAnalyticsModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.ShaderVariantAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDissonanceVoip">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppDissonanceVoip.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DirectorModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.DirectorModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AccessibilityModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.AccessibilityModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Tools.Adapters.Utp2">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Multiplayer.Tools.Adapters.Utp2.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPrimeTween.Demo">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppPrimeTween.Demo.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Environments">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Core.Environments.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.InputSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml.Linq">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppSystem.Xml.Linq.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UmbraModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UmbraModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreFontEngineModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppwebsocket-sharp">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2Cppwebsocket-sharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppIEVO.uGUIDirectedNavigation.Runtime">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppIEVO.uGUIDirectedNavigation.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InternalAPIEngineBridge.004">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.InternalAPIEngineBridge.004.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteShapeModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.SpriteShapeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppunity-websocket-sharp">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2Cppunity-websocket-sharp.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.InputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AdaptivePerformanceModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.AdaptivePerformanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Tools.NetStats">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Multiplayer.Tools.NetStats.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Networking.Transport">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Networking.Transport.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreTextEngineModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections.LowLevel.ILSupport">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Numerics">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppSystem.Numerics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TilemapModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.TilemapModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Mathematics">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Mathematics.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VideoModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.VideoModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFMODUnityResonance">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppFMODUnityResonance.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClothModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.ClothModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBakeryRuntimeAssembly">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppBakeryRuntimeAssembly.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InsightsModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.InsightsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.PhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Collections.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ResourceManager">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.ResourceManager.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNewtonsoft.Json">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppNewtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Profiling.Core">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Profiling.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Threading">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Core.Threading.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPrimeTween.Debug">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppPrimeTween.Debug.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConnectModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UnityConnectModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CrashReportingModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.CrashReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubsystemsModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.SubsystemsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Tools.NetStatsReporting">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Multiplayer.Tools.NetStatsReporting.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Globalization">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppSystem.Globalization.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.LocalizationModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.LocalizationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Configuration">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppSystem.Configuration.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppmscorlib">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2Cppmscorlib.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Internal">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Core.Internal.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Tools.Adapters.Ngo1WithUtp2">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Multiplayer.Tools.Adapters.Ngo1WithUtp2.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Burst.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AIModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.AIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Device">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Core.Device.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Netcode.Runtime">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Netcode.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsBackendPhysXModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.PhysicsBackendPhysXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GridModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.GridModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Components">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Core.Components.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestTextureModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMono.Security">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppMono.Security.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Addressables">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Addressables.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConsentModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UnityConsentModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.Runtime">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.GPUDriven.Runtime">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.RenderPipelines.GPUDriven.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputForUIModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.InputForUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GraphicsStateCollectionSerializerModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.GraphicsStateCollectionSerializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.ImageConversionModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PerformanceReportingModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.PerformanceReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Core.Runtime">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Tools.Adapters">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Multiplayer.Tools.Adapters.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDissonanceFMOD_Playback">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppDissonanceFMOD_Playback.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Tools.NetworkSolutionInterface">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Multiplayer.Tools.NetworkSolutionInterface.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Physics2DModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.Physics2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualEffectGraph.Runtime">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Cinemachine">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Cinemachine.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFacepunch.Steamworks.Win64">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppFacepunch.Steamworks.Win64.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ARModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.ARModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HierarchyModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.HierarchyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CloudBuild">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.CloudBuild.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Tools.MetricTypes">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Multiplayer.Tools.MetricTypes.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppTNRD.SerializedInterface">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppTNRD.SerializedInterface.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.StreamingModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.StreamingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VectorGraphicsModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.VectorGraphicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IMGUIModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.IMGUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestWWWModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.WindModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.WindModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Runtime.Serialization">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Il2CppSystem.Runtime.Serialization.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Tools.Common">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Multiplayer.Tools.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Environments.Internal">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Core.Environments.Internal.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Registration">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Core.Registration.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VRModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.VRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAudioModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Multiplayer">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Services.Multiplayer.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VehiclesModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.VehiclesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DSPGraphModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.DSPGraphModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PropertiesModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.PropertiesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IdentifiersModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.IdentifiersModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.MemoryProfiler">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.MemoryProfiler.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp-firstpass">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Assembly-CSharp-firstpass.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TLSModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.TLSModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainPhysicsModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteMaskModule">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/UnityEngine.SpriteMaskModule.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.UnifiedRayTracing.Runtime">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.UnifiedRayTracing.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Splines">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.Splines.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/Il2CppAssemblies/Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="MelonLoader">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/net6/MelonLoader.dll</HintPath>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/net6/0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppInterop.Runtime">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/net6/Il2CppInterop.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppInterop.Common">
+			<HintPath>$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/MelonLoader/net6/Il2CppInterop.Common.dll</HintPath>
+		</Reference>
+
+    </ItemGroup>
+
+    <PropertyGroup>
+        <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Core.cs" />
+        <Content Include="Directory.Build.props" />
+    </ItemGroup>
+    
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Copy 
+		SourceFiles="$(TargetDir)$(ProjectName).dll" 
+		DestinationFolder="$(HOME)/.steam/debian-installation/steamapps/common/BeetleBall/Mods" 
+		SkipUnchangedFiles="true" />
+  	</Target>
+</Project>
